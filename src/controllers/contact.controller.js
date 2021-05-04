@@ -12,7 +12,7 @@ exports.createContact= async (req, res) => {
   res.status(201).send({
     message: "Contact added successfully!",
     body: {
-      contact: { name, lastName, company, phone, email }
+      contact: { name, lastname, company, phone, email }
     },
   });
 };
