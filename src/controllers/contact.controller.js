@@ -26,7 +26,7 @@ exports.listAllContacts = async (req, res) => {
 // ==> Find contact by Name method:
 exports.findContactbyName = async (req, res) => {
     const contactName = req.params.name;
-    const response = await db.query("SELECT * FROM contacts WHERE name LIKE '"+contactName+"%'");
+    const response = await db.query("SELECT * FROM contacts WHERE name ILIKE '"+contactName+"%'");
    res.status(200).send(response.rows);
 };
 
