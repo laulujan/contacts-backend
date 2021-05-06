@@ -12,9 +12,9 @@ module.exports = router;
 router.get('/contacts', contactController.listAllContacts);
 
 // ==> Find contact by Name: (GET): localhost:3000/api/contacts/:name
-router.get('/contacts/:name', contactController.findContactbyName);
+router.get('/contacts/name/:name', contactController.findContactbyName);
 
-// ==> Find contact by Name: (GET): localhost:3000/api/contacts/:name
+// ==> Find contact by Id: (GET): localhost:3000/api/contacts/:id
 router.get('/contacts/:id', contactController.findContactbyId);
 
 // ==> Update contact by ID: (PUT): localhost: 3000/api/contacts/:id
