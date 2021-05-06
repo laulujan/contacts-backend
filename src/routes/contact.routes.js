@@ -14,6 +14,9 @@ router.get('/contacts', contactController.listAllContacts);
 // ==> Find contact by Name: (GET): localhost:3000/api/contacts/:name
 router.get('/contacts/:name', contactController.findContactbyName);
 
+// ==> Find contact by Name: (GET): localhost:3000/api/contacts/:name
+router.get('/contacts/:id', contactController.findContactbyId);
+
 // ==> Update contact by ID: (PUT): localhost: 3000/api/contacts/:id
 router.put('/contacts/:id', contactController.updateContactById);
 

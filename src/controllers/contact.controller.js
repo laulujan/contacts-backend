@@ -30,6 +30,13 @@ exports.findContactbyName = async (req, res) => {
    res.status(200).send(response.rows);
 };
 
+// ==> Find contact by ID method:
+exports.findContactbyId = async (req, res) => {
+  const contactId = parseInt(req.params.id);
+  const response = await db.query('SELECT * FROM contacts WHERE id = $1', [contactId]);
+ res.status(200).send(response.rows);
+};
+
 // ==> Update contact by ID method:
 exports.updateContactById = async (req, res) => {
     const contactId = parseInt(req.params.id);
